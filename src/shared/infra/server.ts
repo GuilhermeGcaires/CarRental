@@ -4,11 +4,11 @@ import "express-async-errors"
 
 import "./database/data-source";
 
-import "./shared/container"
+import "@shared/container"
 
-import { AppError } from "./errors/AppError";
-import { router } from "./routes";
-import swaggerFile from "./swagger.json";
+import { AppError } from "@shared/errors/AppError";
+import swaggerFile from "../../swagger.json";
+import { router } from "./http/routes";
 
 
 const app = express();
