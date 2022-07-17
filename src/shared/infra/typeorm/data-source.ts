@@ -1,8 +1,8 @@
-
 import { DataSource } from "typeorm";
-import { User } from "@modules/accounts/infra/typeorm/entities/User";
 import { Category } from "@modules/cars/infra/typeorm/entities/Category";
 import { Specification } from "@modules/cars/infra/typeorm/entities/Specification";
+import { Car } from "@modules/cars/infra/typeorm/entities/Car";
+import { User } from "@modules/accounts/infra/typeorm/entities/User";
 
 
 const dataSource = new DataSource({
@@ -14,8 +14,8 @@ const dataSource = new DataSource({
   database: "carrental",
   synchronize: false,
   logging: false,
-  entities: [Category, Specification, User],
-  migrations: ["./src/shared/infra/typerorm/migrations/*.ts"],
+  entities: [Category, Specification, User, Car],
+  migrations: ["./src/shared/infra/typeorm/migrations/*.ts"],
   subscribers: [],  
 })
 

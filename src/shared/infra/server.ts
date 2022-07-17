@@ -2,7 +2,7 @@ import express, { NextFunction, Request, Response } from "express";
 import swaggerUi from "swagger-ui-express";
 import "express-async-errors"
 
-import "./database/data-source";
+import "@shared/infra/typeorm/data-source";
 
 import "@shared/container"
 

@@ -2,7 +2,7 @@ import { Repository } from "typeorm";
 import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
 import { User } from "../typeorm/entities/User";
 import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
-import dataSource from "@shared/infra/database/data-source";
+import dataSource from "@shared/infra/typeorm/data-source";
 
 
 
