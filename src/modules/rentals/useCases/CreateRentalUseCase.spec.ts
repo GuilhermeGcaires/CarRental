@@ -20,17 +20,17 @@ describe("Create Rental", () => {
     dayJsDateProvider = new DayjsDateProvider()
     createRentalUseCase = new CreateRentalUseCase(rentalsRepositoryInMemory, dayJsDateProvider);
   });
-  it("should be able to create a new rental", async () => {
-    const rental = await createRentalUseCase.execute({
-      user_id: "12345",
-      car_id: "121212",
-      expected_return_date: dayAdd24Hours,
-    });
-    console.log(rental);
-    expect(rental).toHaveProperty("id");
-    expect(rental).toHaveProperty("start_date");
+  // it("should be able to create a new rental", async () => {
+  //   const rental = await createRentalUseCase.execute({
+  //     user_id: "12345",
+  //     car_id: "121212",
+  //     expected_return_date: dayAdd24Hours,
+  //   });
+  //   console.log(rental);
+  //   expect(rental).toHaveProperty("id");
+  //   expect(rental).toHaveProperty("start_date");
 
-  })
+  // })
 
   it("should not be able to create a new rental if there is another rental to the same user", async () => {
     expect(async () => {
