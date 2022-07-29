@@ -71,9 +71,20 @@ class CarsRepository implements ICarsRepository {
     
     return cars;
   }
+
   async findById(id: string): Promise<Car> {
     const car = await this.repository.findOne({ where: {id} })
     return car
+  }
+
+  async updateAvailable(id: string, available: boolean): Promise<void> {
+    await this.repository
+    .createQueryBuilder()
+    .update()
+    .set({available})
+    .where("id = :id")
+    .setParameters({id})
+    .execute()
   }
   
 }
