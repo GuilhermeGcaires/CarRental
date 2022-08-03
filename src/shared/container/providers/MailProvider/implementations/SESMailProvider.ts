@@ -30,6 +30,7 @@ class SESMailProvider implements IMailProvider {
       subject,
       html: templateHTML,
     })
+
   }
 
 }
