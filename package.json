@@ -11,6 +11,7 @@
     "seed:admin": "NODE_ENV=test ts-node-dev -r tsconfig-paths/register src/shared/infra/typeorm/seed/admin.ts"
   },
   "dependencies": {
+    "@types/node": "^18.6.3",
     "aws-sdk": "^2.1185.0",
     "bcryptjs": "^2.4.3",
     "class-transformer": "^0.5.1",
