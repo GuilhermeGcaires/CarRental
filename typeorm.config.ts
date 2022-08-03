@@ -3,7 +3,7 @@ import { DataSource } from "typeorm";
 export const connectionSource = new DataSource({
   type: "postgres",
   port: 5432,
-  host: "abc",
+  host: "localhost",
   username: "docker",
   password: "ignite",
   database: "carrental",
