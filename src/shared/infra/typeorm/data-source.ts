@@ -10,7 +10,7 @@ import { UserTokens } from "@modules/accounts/infra/typeorm/entities/UserToken";
 
 const dataSource = new DataSource({
   type: "postgres",
-  host: process.env.NODE_ENV === "test" ? "localhost" : "database",
+  host: "localhost",
   port: 5432,
   username: "docker",
   password: "ignite",
@@ -18,7 +18,7 @@ const dataSource = new DataSource({
   synchronize: false,
   logging: false,
   entities: [Category, Specification, User, UserTokens, Car, CarImage, Rental],
-  migrations: ["./src/shared/infra/typeorm/migrations/*.ts"],
+  migrations: ["./dist/shared/infra/typeorm/migrations/*.js"],
   subscribers: [],
 })
 
