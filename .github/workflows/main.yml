@@ -49,4 +49,4 @@ jobs:
             cd ~/app/CarRental
             yarn
             ./node_modules/.bin/typeorm migration:run -d ./dist/shared/infra/typeorm/data-source.js
-            pm2 restart carrental_api
+            pm2 restart carrental-api
